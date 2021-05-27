@@ -46,6 +46,10 @@ header {
   nav {
     background-color: $secondary-color;
     color: $primary-color;
+    .menu-container {
+      top: 0;
+      position: sticky;
+    }
   }
 
   main {
@@ -127,25 +131,30 @@ footer {
 
 // Mobile
 @media screen and (max-width: 768px) {
-  .menu-container {
-    .menu-title {
-      display: none;
-    }
-    padding: 8px 0;
-    ul {
-      display: flex;
-      justify-content: space-evenly;
-      li {
-        padding: 8px 16px;
-        color: $dark-green;
-        background-color: $warning;
-        margin: 4px 8px;
-        border-radius: 8px;
-        min-width: 60px;
-        text-align: center;
+  nav {
+    top: 0;
+    position: sticky;
+    .menu-container {
+      .menu-title {
+        display: none;
+      }
+      padding: 8px 0;
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+        li {
+          padding: 8px 16px;
+          color: $dark-green;
+          background-color: $warning;
+          margin: 4px 8px;
+          border-radius: 8px;
+          min-width: 60px;
+          text-align: center;
+        }
       }
     }
   }
+
   main {
     .list {
       display: flex;
